@@ -85,8 +85,9 @@ int* reverseMyArrayPlease(int size, int *myArray){
 
 
 /*Function convertDecToBin:
-takes a single argument called Num and converts the Dec number into a binary number and stores it in
-an array
+Description: converts a decimal number into a Array containing the representation of that number
+in binary
+Parameters: takes a single argument called Num 
 returns: Array containing the binary representation of a number*/
 int* convertDecToBin(int Num) {
     /*allocate memory for the array such that each memory location is the size of int*/
@@ -114,8 +115,9 @@ int* convertDecToBin(int Num) {
     return arr;
 
 }
-/*Function convertBinToDec 
-Takes a single argument which is a derefrenced array
+/*Function: convertBinToDec 
+Description: Converts a binary representation of a number into decimal format
+parameters: Takes a single argument which is a derefrenced array
 returns: the decimal value of the binary value that was inputed*/
 int convertBinToDec(int *Array){
     /*reverses the array so we can access the elements in order*/
@@ -139,9 +141,10 @@ int convertBinToDec(int *Array){
     return number;
 }
 
-/*Function convertDecToHex:
-takes one argumemt
-    a number that is to be converted into a hex value
+/*Function: convertDecToHex
+Description: Converts a binary number into an array of values that is the hex representation of
+that number
+Parameters: a number that is to be converted into a hex value
 returns: an int pointer to the arr*/
 int* convertDecToHex(int Num) {
     /*allocate memory to the heap*/
@@ -167,9 +170,10 @@ int* convertDecToHex(int Num) {
     return arr;
 
 }
-/*Function convertHexToDec 
-Takes a single argument which is a derefrenced array
-returns: the decimal value of the binary value that was inputed*/
+/*Function: convertHexToDec 
+Description: Converts a hex representation of a number into decimal format
+parameters: Takes a single argument which is a derefrenced array
+returns: the decimal value of the Hex value that was inputed*/
 int convertHexToDec(int *Array){
     /*reverses the array so the elements can be accessed in the proper order*/
     int* reversedArray = reverseMyArrayPlease(NUMBER_OF_HEX_DIGITS,Array);
