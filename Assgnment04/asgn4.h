@@ -7,6 +7,7 @@ we haven't already included this header*/
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>         /* for malloc() */
+#include <stdio.h> 
 
 
 /* some helper define statements */
@@ -66,7 +67,7 @@ Note: the return array is malloc'd and it is expected the user will free() the m
 */
 int* reverseMyArrayPlease(int size, int *myArray){
     /* allocate memory, one int for each element, size*4 bytes */
-    int *reversedArray = malloc( size * sizeof(int));
+    int *reversedArray = (int *)malloc( size * sizeof(int));
     /* loop through the array, extract one element, place it in the new array */  
     for(int i = 0; i < size; i++){
         /* -1 since the end of the array is at (size-1),
