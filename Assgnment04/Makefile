@@ -1,14 +1,19 @@
-FILE = asgn4
+CC = gcc
+OBJECTS = asgn4.o
+FLAGS = -std=c11
+SOURCE = $(wildcard *.c)
 
-build: $(FILE).c
-	# next line compiles with all warnings on, debug info, and links math lib
-	gcc -Wall -g $(FILE).c -o $(FILE) -lm -fno-pie -no-pie
+asgn4: $(OBJECTS)
+	$(CC) $(FLAGS) $(OBJECTS) -o asgn4 -lm -fno-pie -no-pie
 
+%.o: %.c
+	$(CC) -c $^
 
-.PHONY: db
+run: asgn4
+	./asgn4
 
-db:
-	gdb -tui $(FILE)
+echo:
+	echo $(SOURCE)
 
-run:
-	./$(FILE)
+clean:
+	rm -f *.o asgn4
